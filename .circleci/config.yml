@@ -203,9 +203,10 @@ jobs:
           command: |
             export OldBucketID=$(cat ~/textfile.txt)
             aws s3 rm "s3://mybucket-13014728547" --recursive
-            aws cloudformation delete-stack --stack-name production-distro --region=us-east-1
-            aws cloudformation delete-stack --stack-name stack-create-bucket-${CIRCLE_WORKFLOW_ID:0:7} --region=us-east-1
-            aws cloudformation delete-stack --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} --region=us-east-1
+            
+            # aws cloudformation delete-stack --stack-name production-distro --region=us-east-1
+            # aws cloudformation delete-stack --stack-name stack-create-bucket-${CIRCLE_WORKFLOW_ID:0:7} --region=us-east-1
+            # aws cloudformation delete-stack --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} --region=us-east-1
 
 
 
